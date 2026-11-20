@@ -51,12 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileNavDrawer = document.getElementById('mobile-nav-drawer');
   const closeMobileMenuBtn = document.getElementById('close-mobile-menu');
   const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
 
   function openMobileMenu() {
     if (mobileNavDrawer) {
       mobileNavDrawer.classList.remove('translate-x-full');
       mobileNavDrawer.classList.add('translate-x-0');
       document.body.style.overflow = 'hidden';
+    }
+    if (mobileMenuBackdrop) {
+      mobileMenuBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+      mobileMenuBackdrop.classList.add('opacity-100', 'pointer-events-auto');
     }
   }
 
@@ -66,10 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileNavDrawer.classList.add('translate-x-full');
       document.body.style.overflow = '';
     }
+    if (mobileMenuBackdrop) {
+      mobileMenuBackdrop.classList.add('opacity-0', 'pointer-events-none');
+      mobileMenuBackdrop.classList.remove('opacity-100', 'pointer-events-auto');
+    }
   }
 
   if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileMenu);
   if (closeMobileMenuBtn) closeMobileMenuBtn.addEventListener('click', closeMobileMenu);
+  if (mobileMenuBackdrop) mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
 
   mobileNavLinks.forEach(link => {
     link.addEventListener('click', closeMobileMenu);
