@@ -9,6 +9,12 @@ Official website for **POONAM CONSTRUCTION – Engineers & Contractors**, based 
 
 ---
 
+## 🚀 1-Click Deploy to Render
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/poonam031/poonamconstruct)
+
+---
+
 ## 🚀 Deployment on Render (render.com)
 
 This website is structured as an ultra-fast, modern static site with zero external build step dependencies.
