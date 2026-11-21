@@ -94,26 +94,30 @@
 
 <body class="bg-brand-ivory text-brand-charcoal antialiased selection:bg-brand-gold selection:text-white">
 
-  <!-- TOP EDITORIAL BAR -->
+  <!-- TOP EDITORIAL BAR (Responsive Single-Line on Mobile) -->
   <div
-    class="bg-brand-midnight text-brand-beige text-xs py-2 px-4 sm:px-8 border-b border-white/10 tracking-widest font-mono">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-      <div class="flex items-center gap-3">
-        <span class="text-brand-gold">●</span>
-        <span>ENGINEERS &amp; CONTRACTORS | KOLHAPUR, MAHARASHTRA</span>
+    class="bg-brand-midnight text-brand-beige text-[11px] sm:text-xs py-2 px-3 sm:px-8 border-b border-white/10 tracking-wider font-mono">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+      <!-- Left: Title & Location -->
+      <div class="flex items-center gap-2 sm:gap-3 text-white/90">
+        <span class="text-brand-gold text-xs">●</span>
+        <span class="hidden sm:inline">ENGINEERS &amp; CONTRACTORS |</span>
+        <span class="text-[10px] sm:text-xs tracking-wider">KOLHAPUR</span>
         <span class="hidden md:inline text-white/30">|</span>
         <span class="hidden md:inline text-white/70">ER. PRATIK D. CHOUGULE (B.E. CIVIL)</span>
       </div>
-      <div class="flex items-center gap-6">
-        <a href="tel:+917264908823" class="hover:text-white transition-colors flex items-center gap-1.5">
-          <span>TEL: 72649 08823</span>
+      <!-- Right: Phone & WhatsApp -->
+      <div class="flex items-center gap-3 sm:gap-6 text-[11px] sm:text-xs shrink-0">
+        <a href="tel:+917264908823" class="hover:text-white transition-colors flex items-center gap-1.5 text-white/90 font-semibold">
+          <span>72649 08823</span>
         </a>
+        <span class="text-white/20">|</span>
         <a href="https://wa.me/917264908823?text=Hello%20Poonam%20Construction,%20I%20am%20interested%20in%20your%20construction%20services.%20I%20would%20like%20to%20discuss%20my%20construction%20project."
-          target="_blank" rel="noopener noreferrer" class="hover:text-white text-[#25D366] flex items-center gap-1.5 transition-colors">
+          target="_blank" rel="noopener noreferrer" class="hover:text-white text-[#25D366] flex items-center gap-1.5 transition-colors font-semibold">
           <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
           </svg>
-          <span>WHATSAPP INQUIRY</span>
+          <span>WHATSAPP</span>
         </a>
       </div>
     </div>
@@ -122,12 +126,27 @@
   <!-- STICKY NAVBAR -->
   <header id="main-header" class="editorial-navbar sticky top-0 z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
+      <div class="flex items-center justify-between h-16 sm:h-20">
 
-        <!-- Brand Logo -->
-        <a href="#home" class="flex items-center gap-3 group" aria-label="Poonam Construction Home">
-          <img src="assets/images/logo.svg" alt="Poonam Construction"
-            class="h-11 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        <!-- Brand Logo (Pure Vector Emblem + Editorial Typography) -->
+        <a href="#home" class="flex items-center gap-2.5 sm:gap-3 group" aria-label="Poonam Construction Home">
+          <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-sm bg-gradient-to-br from-brand-navy to-brand-midnight border border-brand-gold/60 flex items-center justify-center shrink-0 shadow-md group-hover:border-brand-gold transition-colors">
+            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-brand-gold" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M34 4 L64 26 L64 58 L34 65 L4 58 L4 26 Z" stroke="currentColor" stroke-width="2" fill="none" />
+              <path d="M4 26 L34 42 L64 26" stroke="currentColor" stroke-width="1.8" fill="none" />
+              <path d="M22 22 L22 48 M22 22 H31 C35 22 37 25 37 29 C37 33 35 36 31 36 H22" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+              <path d="M48 36 C46 33 42 31 38 31 C32 31 28 36 28 43 C28 50 32 55 38 55 C43 55 47 52 48 48" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1 sm:gap-1.5 leading-none">
+              <span class="font-serif font-bold text-base sm:text-2xl tracking-wider text-white">POONAM</span>
+              <span class="font-serif font-normal text-base sm:text-2xl tracking-wide gold-gradient-text">CONSTRUCTION</span>
+            </div>
+            <span class="font-mono text-[8px] sm:text-[10px] tracking-[0.16em] sm:tracking-[0.25em] text-brand-beige uppercase mt-0.5 sm:mt-1">
+              ENGINEERS &amp; CONTRACTORS
+            </span>
+          </div>
         </a>
 
         <!-- Desktop Navigation Links -->
@@ -171,7 +190,20 @@
     class="fixed inset-y-0 right-0 z-50 w-full max-w-xs sm:max-w-sm bg-brand-midnight text-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between overflow-y-auto border-l border-brand-gold/30">
     <div class="p-6">
       <div class="flex items-center justify-between pb-6 border-b border-white/10">
-        <img src="assets/images/logo-light.svg" alt="Poonam Construction" class="h-10 w-auto">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-sm bg-gradient-to-br from-brand-navy to-brand-midnight border border-brand-gold/60 flex items-center justify-center shrink-0 shadow-md">
+            <svg class="w-6 h-6 text-brand-gold" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M34 4 L64 26 L64 58 L34 65 L4 58 L4 26 Z" stroke="currentColor" stroke-width="2" fill="none" />
+              <path d="M4 26 L34 42 L64 26" stroke="currentColor" stroke-width="1.8" fill="none" />
+              <path d="M22 22 L22 48 M22 22 H31 C35 22 37 25 37 29 C37 33 35 36 31 36 H22" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+              <path d="M48 36 C46 33 42 31 38 31 C32 31 28 36 28 43 C28 50 32 55 38 55 C43 55 47 52 48 48" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif font-bold text-base tracking-wider text-white leading-none">POONAM</span>
+            <span class="font-mono text-[8px] tracking-[0.2em] text-brand-gold uppercase mt-1">CONSTRUCTION</span>
+          </div>
+        </div>
         <button id="close-mobile-menu" class="p-2 rounded bg-white/10 text-white/80 hover:text-white"
           aria-label="Close Navigation">
           <i data-lucide="x" class="w-5 h-5"></i>
@@ -264,12 +296,12 @@
         </p>
 
         <!-- Action Buttons -->
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-16">
-          <a href="#projects" class="btn-architect btn-architect-gold">
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 max-w-xs sm:max-w-none mb-12 sm:mb-16">
+          <a href="#projects" class="btn-architect btn-architect-gold py-3.5 px-6 text-xs sm:text-sm">
             <span>Explore Our Projects</span>
             <span>→</span>
           </a>
-          <a href="#contact" class="btn-architect btn-architect-outline">
+          <a href="#contact" class="btn-architect btn-architect-outline py-3.5 px-6 text-xs sm:text-sm">
             <span>Start Your Project</span>
           </a>
         </div>
@@ -1281,7 +1313,25 @@
 
         <!-- Brand & Description -->
         <div class="lg:col-span-5">
-          <img src="assets/images/logo-light.svg" alt="Poonam Construction" class="h-12 w-auto mb-6">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-11 h-11 rounded-sm bg-gradient-to-br from-brand-navy to-brand-midnight border border-brand-gold/60 flex items-center justify-center shrink-0 shadow-md">
+              <svg class="w-7 h-7 text-brand-gold" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34 4 L64 26 L64 58 L34 65 L4 58 L4 26 Z" stroke="currentColor" stroke-width="2" fill="none" />
+                <path d="M4 26 L34 42 L64 26" stroke="currentColor" stroke-width="1.8" fill="none" />
+                <path d="M22 22 L22 48 M22 22 H31 C35 22 37 25 37 29 C37 33 35 36 31 36 H22" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <path d="M48 36 C46 33 42 31 38 31 C32 31 28 36 28 43 C28 50 32 55 38 55 C43 55 47 52 48 48" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none" />
+              </svg>
+            </div>
+            <div class="flex flex-col">
+              <div class="flex items-center gap-1.5 leading-none">
+                <span class="font-serif font-bold text-2xl tracking-wider text-white">POONAM</span>
+                <span class="font-serif font-normal text-2xl tracking-wide gold-gradient-text">CONSTRUCTION</span>
+              </div>
+              <span class="font-mono text-[10px] tracking-[0.22em] text-brand-beige uppercase mt-1">
+                ENGINEERS &amp; CONTRACTORS
+              </span>
+            </div>
+          </div>
           <p class="font-serif italic text-brand-goldLight text-lg mb-4">
             "Designed to build dreams. Built to last."
           </p>
